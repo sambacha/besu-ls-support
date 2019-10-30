@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+run()  {
+	CMD=$1
+	echo $CMD
+	eval $CMD
+	echo "\n"
+}
+
+runBesu() {
+	run "$BESU_PATH $1 --data-path=$BESU_DATA --rpc-http-cors-origins=all --discovery-enabled=false --rpc-http-enabled --network=dev --rpc-http-apis=ETH,NET,WEB3,DEBUG --logging=INFO"
+}
