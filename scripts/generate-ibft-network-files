@@ -30,6 +30,8 @@ cp out/networkFiles/genesis.json out/ibft-network/
 echo "Copying nodes keys."
 i=1
 for f in out/networkFiles/keys/*; do
-  cp $f/* "out/ibft-network/validator-$i"
+  cp $f/* "out/ibft-network/validator-$i/data"
   ((i=i+1))
 done
+
+tree out/ibft-network
