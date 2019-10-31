@@ -143,3 +143,17 @@ This commands generates network config files and then start the created network.
 ./start.sh validator 4
 ```
 
+### Print current block number
+
+```shell
+sh scripts/block-number
+```
+
+```json
+{
+  "jsonrpc" : "2.0",
+  "id" : 1,
+  "result" : "0x28f"
+}
+```
+
